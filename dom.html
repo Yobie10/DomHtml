@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Halaman yang Diperbarui</title>
+    <style>
+      * {
+        border: 2px solid #dedede;
+        padding: 15px;
+        margin: 15px;
+      }
+      html {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        max-width: 600px;
+        margin: 30px auto;
+        font-family: sans-serif;
+        color: #333;
+      }
+      /* Menambahkan warna latar belakang pada div */
+      #container1 {
+        background-color: #e0f7fa; /* Biru Muda */
+      }
+      #container2 {
+        background-color: #ffe0b2; /* Jingga Lembut */
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="h1">Judul</h1>
+    <div id="container1">
+      <section id="a">
+        <p>Paragraf 1</p>
+        <p>Paragraf 2</p>
+        <a href="https://www.google.com">Link</a>
+      </section>
+    </div>
+    <div id="container2">
+      <ul>
+        <li class="list">List 1</li>
+        <li class="list">List 2</li>
+        <li class="list">List 3</li>
+      </ul>
+    </div>
+
+    <!-- JavaScript Terintegrasi -->
+    <script>
+      // Fungsi untuk mengubah teks, gaya, ukuran, dan warna latar belakang
+      function updateElements() {
+        // Mengubah semua paragraf
+        const paragraphs = document.querySelectorAll("p");
+        paragraphs.forEach((para, index) => {
+          // Mengubah teks
+          para.textContent = `Updated Paragraph ${index + 1}`;
+
+          // Mengubah gaya
+          para.style.color = "#ffffff"; // Warna teks putih
+          para.style.fontSize = "18px"; // Ukuran font 18px
+
+          // Mengubah warna latar belakang
+          para.style.backgroundColor = "#808080"; // Abu-abu
+          para.style.padding = "10px"; // Menyesuaikan padding agar terlihat rapi
+        });
+
+        // Mengubah semua item daftar
+        const listItems = document.querySelectorAll("li.list");
+        listItems.forEach((item, index) => {
+          // Mengubah teks
+          item.textContent = `Updated List Item ${index + 1}`;
+
+          // Mengubah gaya
+          item.style.color = "#ffffff"; // Warna teks putih
+          item.style.fontSize = "16px"; // Ukuran font 16px
+
+          // Mengubah warna latar belakang
+          item.style.backgroundColor = "#808080"; // Abu-abu
+          item.style.padding = "10px"; // Menyesuaikan padding agar terlihat rapi
+        });
+
+        // Mengubah judul
+        const heading = document.getElementById("h1");
+        heading.textContent = "Updated Judul";
+        heading.style.color = "#ffffff"; // Warna teks putih
+        heading.style.fontSize = "24px"; // Ukuran font 24px
+        heading.style.backgroundColor = "#808080"; // Abu-abu
+        heading.style.padding = "10px"; // Menyesuaikan padding agar terlihat rapi
+
+        // Mengubah link
+        const link = document.querySelector("a");
+        link.textContent = "Updated Link";
+        link.style.color = "#ffffff"; // Warna teks putih
+        link.style.fontSize = "16px"; // Ukuran font 16px
+        link.style.backgroundColor = "#808080"; // Abu-abu
+        link.style.padding = "10px"; // Menyesuaikan padding agar terlihat rapi
+        link.style.textDecoration = "none"; // Menghapus garis bawah
+        link.style.display = "inline-block"; // Membuat link seperti tombol
+        link.style.borderRadius = "5px"; // Membulatkan sudut
+      }
+
+      // Memanggil fungsi setelah konten dimuat
+      document.addEventListener("DOMContentLoaded", updateElements);
+    </script>
+  </body>
+</html>
